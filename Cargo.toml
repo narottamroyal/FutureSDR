@@ -53,6 +53,7 @@ futuresdr-types = { path = "crates/types", version = "0.7.0" }
 default = ["ctrl_port", "tracing_max_level_debug", "tracing_release_max_level_info"]
 aaronia_http = ["seify/aaronia_http"]
 audio = ["dep:cpal", "dep:hound", "dep:rodio"]
+bladerf2 = ["seify/bladerf2"]
 burn = ["dep:burn"]
 ctrl_port = ["dep:axum", "dep:hyper", "dep:tower-http", "dep:tower-service"]
 flow_scheduler = []
@@ -122,7 +123,7 @@ num-complex = { version = "0.4", features = ["bytemuck"] }
 num-integer = "0.1"
 once_cell = "1.21"
 rustfft = "6.4"
-seify = { version = "0.21", default-features = false, optional = true }
+seify = { git = "https://github.com/narottamroyal/seify", branch = "bladerf2", default-features = false, optional = true }
 slab = "0.4"
 thiserror = "2.0"
 tracing = { version = "0.1", default-features = false, features = ["log", "std"] }
